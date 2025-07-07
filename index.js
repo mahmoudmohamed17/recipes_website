@@ -104,7 +104,7 @@ function showDialog(recipe) {
     content.innerHTML = `
     <h2>${recipe.title}</h2>
     <img src="${recipe.image_url}" alt="${recipe.title}" style="width: 100%; border-radius: 6px;" />
-    <p><strong>Publisher:</strong> ${recipe.ingredients}</p>
+    <p><strong>Publisher:</strong> ${recipe.publisher}</p>
     <p><strong>Ingredients:</strong></p>
     <ul class="ingredients-list"><ul/>
   `;
