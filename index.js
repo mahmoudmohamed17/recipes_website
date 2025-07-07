@@ -55,8 +55,10 @@ function displayRecipes(recipes) {
         card.classList.add('recipe-card');
         card.innerHTML = `
             <img src='${recipe.image_url}' alt='${recipe.title}'>
-            <button class="view-btn">View source</button>
-            <button class="details-btn">Recipe setails</button>
+            <div id="recipeBtns">
+                <button class="view-btn">View source</button>
+                <button class="details-btn">Recipe setails</button>
+            </div>
             <h3>${recipe.title}</h3>
         `;
         card.querySelector('.view-btn').addEventListener('click', (e) => {
@@ -65,9 +67,6 @@ function displayRecipes(recipes) {
         });
 
         card.querySelector('.details-btn').addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-        card.addEventListener('click', () => {
             getRecipeDetails(recipe.recipe_id).then(data => {
                 showDialog(data.recipe);
             }).catch(err => {

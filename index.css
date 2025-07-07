@@ -73,6 +73,10 @@ button {
     background-color: #1e7e34;
 }
 
+#recipeBtns {
+    padding-top: 8px;
+}
+
 .search-area {
     display: flex;
     justify-content: center;
